@@ -47,10 +47,10 @@
     "vnetID" : "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
     "subnet1" : "[concat(variables('vnetID'),'/subnets/',parameters('Subnet1Name'))]",
     "subnet2" : "[concat(variables('vnetID'),'/subnets/',parameters('Subnet2Name'))]",
-	"subnet3" : "[concat(variables('vnetID'),'/subnets/',parameters('Subnet3Name'))]",
+    "subnet3" : "[concat(variables('vnetID'),'/subnets/',parameters('Subnet3Name'))]",
     "routeTable1Id" : "[resourceId('Microsoft.Network/routeTables',parameters('routeTable1Name'))]",
     "routeTable2Id" : "[resourceId('Microsoft.Network/routeTables',parameters('routeTable2Name'))]",
-	"routeTable3Id" : "[resourceId('Microsoft.Network/routeTables',parameters('routeTable3Name'))]"
+    "routeTable3Id" : "[resourceId('Microsoft.Network/routeTables',parameters('routeTable3Name'))]"
   },
   "resources": [
         {
@@ -105,7 +105,7 @@
       "value": "[variables('subnet2')]",
       "type": "string"
     },
-	 "subnet3Ref": {
+    "subnet3Ref": {
       "value": "[variables('subnet3')]",
       "type": "string"
     }
