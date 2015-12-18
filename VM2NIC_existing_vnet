@@ -84,8 +84,8 @@
     "publicIPAddressName": "[parameters('PublicIPAddrName')]",
     "publicIPAddressType": "Dynamic",
 "vnetID": "[resourceId(parameters('virtualNetworkExistingRGName'), 'Microsoft.Network/virtualNetworks', parameters('VirtualNetworkName'))]",
-"subnet1Ref": "[concat(variables('vnetID'),'/subnets/', parameters('subnet1Name'))]",
-"subnet2Ref": "[concat(variables('vnetID'),'/subnets/', parameters('subnet2Name'))]"
+"subnet1Ref": "[concat(variables('vnetID'),'/subnets/', parameters('Subnet1Name'))]",
+"subnet2Ref": "[concat(variables('vnetID'),'/subnets/', parameters('Subnet2Name'))]"
 },
   "resources": [
     {
