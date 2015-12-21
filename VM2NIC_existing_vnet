@@ -105,7 +105,7 @@
               "publicIPAddress": {
                 "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
               },
-                            "subnet": { "id": "[reference('Microsoft.Resources/deployments/SettingUpVirtualNetwork','2015-01-01').outputs.subnet1Ref.value]" }
+                            "subnet": { "id": "[variables('subnet1Ref')]" }
                         }
                     }
                 ],
@@ -123,7 +123,7 @@
                         "name": "ipconfig1",
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
-                        "subnet": { "id": "[reference('Microsoft.Resources/deployments/SettingUpVirtualNetwork','2015-01-01').outputs.subnet2Ref.value]" }
+                        "subnet": { "id": "[variables('subnet2Ref')]" }
                         }
                     }
                 ],
