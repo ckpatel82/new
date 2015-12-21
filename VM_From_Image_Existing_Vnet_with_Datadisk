@@ -209,6 +209,16 @@
           "adminPassword": "[parameters('adminPassword')]"
         },
         "storageProfile": {
+        "dataDisks": [
+		{
+            "name": "[concat(parameters('vmName'),'-dataDisk')]",
+            "lun": '0',
+            "createOption": "FromImage",            
+            "vhd": {
+              "uri": "[parameters('dataDiskUri')]"
+            },			
+		}
+	],
           "osDisk": {
             "name": "[concat(parameters('vmName'),'-osDisk')]",
             "osType": "[parameters('osType')]",
