@@ -67,6 +67,13 @@
         "description": "Password for the Virtual Machine"
       }
     },
+    "customData": {
+      "type": "string",
+      "defaultValue": "CentralManagerIPAddress",
+      "metadata": {
+        "description": "String passed down to the Virtual Machine."
+      }
+    },
     "baseUrl": {
       "type": "string",
       "metadata": {
@@ -206,7 +213,8 @@
         "osProfile": {
           "computername": "[parameters('vmName')]",
           "adminUsername": "[parameters('adminUserName')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "adminPassword": "[parameters('adminPassword')]",
+          "customData": "[base64(parameters('customData'))]"
         },
         "storageProfile": {
         "dataDisks": [
