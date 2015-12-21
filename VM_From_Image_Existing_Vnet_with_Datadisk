@@ -127,14 +127,19 @@
             "type" : "string",
 	    "defaultValue": "10.0.1.5",
             "metadata" : { "description" : "Subnet 1 Starting IP Address" }
-        }
+        },
+        "PublicIPAddrName": {
+	   "type": "string",
+           "defaultValue": "specializedVMPublicIP",
+           "metadata": { "description": "Punlic IP AddressName" }
+	}
 	},
   "variables": {
     "api-version": "2015-06-15",
     "apiVer": "2015-06-15",
     "imageOffer": "vwaas_beta",
     "storageAccountName": "[concat('http://',parameters('userImageStorageAccountName'),'.blob.core.windows.net')]",
-    "publicIPAddressName": "specializedVMPublicIP",
+    "publicIPAddressName": "[parameters('PublicIPAddrName')]",,
     "publicIPAddressType": "Dynamic",
     "virtualNetworkName": "specializedVMVNET",
     "vnetID": "[resourceId(parameters('virtualNetworkExistingRGName'), 'Microsoft.Network/virtualNetworks', parameters('VirtualNetworkName'))]",
