@@ -162,7 +162,7 @@
               "publicIPAddress": {
                 "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
               },
-                            "subnet": { "[variables('subnet1Ref')]" }
+                            "subnet": { "id": "[variables('subnet1Ref')]" }
                         }
                     }
                 ],
@@ -220,11 +220,11 @@
         "dataDisks": [
 		{
             "name": "[concat(parameters('vmName'),'-dataDisk')]",
-            "lun": '0',
+            "lun": "0",
             "createOption": "FromImage",            
             "vhd": {
               "uri": "[parameters('dataDiskUri')]"
-            },			
+            }			
 		}
 	],
           "osDisk": {
