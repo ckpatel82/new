@@ -137,7 +137,7 @@
     "publicIPAddressName": "specializedVMPublicIP",
     "publicIPAddressType": "Dynamic",
     "virtualNetworkName": "specializedVMVNET",
-    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
+    "vnetID": "[resourceId(parameters('virtualNetworkExistingRGName'), 'Microsoft.Network/virtualNetworks', parameters('VirtualNetworkName'))]",
     "subnet1Ref": "[concat(variables('vnetID'),'/subnets/', parameters('Subnet1Name'))]",
     "subnet2Ref": "[concat(variables('vnetID'),'/subnets/', parameters('Subnet2Name'))]",
     "virtualNetworkSetupURL": "[concat(parameters('baseUrl'),'/vnet-',parameters('vnetNewOrExisting'),'.json')]",
