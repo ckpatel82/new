@@ -226,7 +226,7 @@
 		{
             "name": "[concat(parameters('vmName'),'-dataDisk')]",
             "lun": "0",
-            "createOption": "FromImage",            
+            "createOption": "Attach",            
             "vhd": {
               "uri": "[parameters('dataDiskUri')]"
             }			
