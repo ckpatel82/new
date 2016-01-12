@@ -118,11 +118,7 @@
     "storageAccountName": "[concat('http://',parameters('userImageStorageAccountName'),'.blob.core.windows.net')]",
     "publicIPAddressName": "specializedVMPublicIP",
     "publicIPAddressType": "Dynamic",
-    "virtualNetworkName": "specializedVMVNET",
-    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
-    "subnet1Ref": "[concat(variables('vnetID'),'/subnets/', parameters('Subnet1Name'))]",
-    "subnet2Ref": "[concat(variables('vnetID'),'/subnets/', parameters('Subnet2Name'))]",
-    "virtualNetworkSetupURL": "[concat(parameters('baseUrl'),'/vnet-',parameters('vnetNewOrExisting'),'.json')]",
+    "virtualNetworkSetupURL": "[concat(parameters('baseUrl'),'/vnet-','new','.json')]",
     "userImageName": "[concat('http://',parameters('userImageStorageAccountName'),'.blob.core.windows.net/',parameters('userImageStorageContainerName'),'/',parameters('userImageVhdName'))]",
     "osDiskVhdName": "[concat('http://',parameters('userImageStorageAccountName'),'.blob.core.windows.net/vhds/',parameters('vmName'),'osDisk.vhd')]"
   },
